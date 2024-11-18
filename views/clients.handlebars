@@ -1,0 +1,13 @@
+<h1>Lista de Clientes</h1>
+<ul>
+  {{#each clients}}
+    <li>
+      <strong>{{nombre}}</strong>: {{direccion}} - 
+      {{#if preferencia_transporte}}
+        {{preferencia_transporte.nombre}}  <!-- Suponiendo que el transporte tiene un campo 'nombre' -->
+      {{else}}
+        No tiene preferencia de transporte
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>
